@@ -7,16 +7,16 @@ const MDImage = (props) =>{
 	const type = props.type.toLowerCase();
 	if(type=="driver"){
 		return(
-		<>
+			<div className='h-full w-full'>
 			Image
-		</>
+		</div>
 		)
 	}
 	else if(type=="constructor"){
 		return(
-			<>
+			<div className='h-full w-full'>
 				Image
-			</>
+			</div>
 		)	
 	}
 	else{ //circuit
@@ -28,13 +28,14 @@ const MDImage = (props) =>{
 		console.log(props.data[0].lng);
 		if(props.data[0].lat == undefined || props.data[0].lng == undefined ){
 			return(
-				<>
+				<div className='h-full w-full'>
+
 					Image
-				</>
+				</div>
 			)
 		}else{
 		return(
-			<div className='h-40'>
+			<div className='h-full w-full'>
 			<MapContainer center={[props.data[0].lat, props.data[0].lng]} zoom={13} scrollWheelZoom={false} style={{height : '160px', width: '507px'}}>
 			  <TileLayer
 			    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
