@@ -1,5 +1,6 @@
 import { Dialog } from '@headlessui/react'
 import ModalDesc from './ModalDesc.jsx'
+import MDImage from './MDImage.jsx'
 
 const MDialog = (props) => {
 
@@ -27,9 +28,9 @@ const MDialog = (props) => {
 							</Dialog.Description>
 						</div>
 						
-						<div className='h-full w-full border-2 border-blue-800 grid place-content-center bg-black text-white'>
-
-   		    			  Image
+						<div className='max-h-full w-full border-2 border-blue-800 grid place-content-center bg-black text-white'>
+						
+   		    			  <MDImage type={props.type} data={props.data}/>
 
 						</div>
 
