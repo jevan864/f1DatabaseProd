@@ -1,0 +1,37 @@
+components and what they should do (writing this before making them so things in the end may not completely align with whats here)
+
+1. LoginView - displays hero image, calls LoginBox
+2. LoginBox - displays text fields, log in button, onsubmit will tell App to change views
+
+3. MainPageWH (with header) - calls Header and MainView (after a season has been selected)
+4. Header - tells MainPageWH when a new season is selected, displays szn selector, "favourites" button, "about" button
+
+5. MainView - calls RaceList and ResultsPanel or StandingsPanel (once one has been selected by user)
+6. RaceList - calls RaceListItem 
+7. RaceListItem - shows details for a race given by RaceList, has buttons for Results and Standings which tell MainView to display those lists
+
+8. ResultsPanel - shows QualifyingDisplay and ResultsDisplay
+
+9. ResultsDisplay - shows big 1st 2nd 3rd nodes and then ResultList underneath
+10. ResultsList - calls ResultsListItem
+11. ResultsListItem - shows results for a race given by ResultsList
+
+12. QualifyingDisplay - calls QualifyingList
+13. QualifyingList - calls QualifyingListItem
+14. QualifyingListItem - shows qualify data for a race given by QualifyingList
+
+15. StandingsPanel - calls DriversList and ConstructorsList
+16. DriversList - calls DCListItem
+17. ConstructorsList - calls DCListItem
+18. DriverListItem - shows the stats for Drivers Position, Name (with link), Points, and Wins
+18.5. ConstructorListItem - shows the stats for Constructors Position, Name (with link), Points, and Wins. 
+
+	VERY SUBJECT TO CHANGE
+19. ModalDialog - creates a modal dialog, receives prop to tell it if it is displaying dialog for 
+				  About, Favourites, DriverDetails, ContructorDetails, CircuitDetails, (?) or hero image credit(?)
+
+20. About - what is displayed in modal dialog
+20. Favourites - what is displayed in modal dialog - probably calls FavouritesListItem
+20. DriverDetails - what is displayed in modal dialog
+20. ConstructorDetails - what is displayed in modal dialog
+20. CircuitDetails - what is displayed in modal dialog
